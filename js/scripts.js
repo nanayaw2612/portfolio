@@ -52,3 +52,33 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+var form = document.getElementById("contact-form");
+var name = document.getElementById("name");
+var phone = document.getElementById("phone");
+
+function handleForm() {
+    var form = document.getElementById("contactForm");
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var phone = document.getElementById("phone").value;
+    var message = document.getElementById("message").value;
+    
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
+        // Add your form submission logic here, e.g., send data to server
+        
+        // Display success message
+        var submitSuccessMessage = document.getElementById("submitSuccessMessage");
+        var submitErrorMessage = document.getElementById("submitErrorMessage");
+        
+        // Assume submission is successful
+        submitSuccessMessage.classList.remove("d-none");
+        submitErrorMessage.classList.add("d-none");
+    });
+}
+
+handleForm();
+
+
+
